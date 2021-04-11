@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,9 @@ Route::get('/', [LandingPageController::class, 'index']);
 // product
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/product/detail', [ProductController::class, 'detail']);
+
+// Cart
+Route::get('/cart', [CartController::class, 'index']);
+
+// Account
+Route::get('/account', [AccountController::class, 'index']);
